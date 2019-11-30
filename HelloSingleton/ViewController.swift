@@ -18,8 +18,8 @@ class ViewController: UIViewController {
 
     @IBAction func buttonAction(_ sender: Any) {
         
-        var device = UIDevice.current
-        var deviceOrientaton = device.orientation
+        let device = UIDevice.current
+        let deviceOrientaton = device.orientation
         switch deviceOrientaton {
         case .faceDown:
             label.text = "faceDown..."
@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             label.text = "portraitUpsideDown..."
         case .unknown:
             label.text = "unknown..."
+        default:
+            break
         }
         
     }
